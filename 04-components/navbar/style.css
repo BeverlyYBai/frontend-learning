@@ -1,0 +1,19 @@
+/* 基础重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* 让整个 navbar 成为一行（关键） */
+.navbar {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 左右分开 */
+  height: 64px;
+  padding: 0 32px;
+  background: #000;
+}
