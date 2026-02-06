@@ -1,0 +1,48 @@
+/* 基础重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* 让整个 navbar 成为一行（关键） */
+.navbar {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 左右分开 */
+  height: 64px;
+  padding: 0 32px;
+  background: #000;
+}
+
+/* 让左边（logo + menu）横向排列 */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* 让 menu 横排（非常关键） */
+.menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 先给链接一个“能看”的样子 */
+.menu a,
+.login {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu a:hover,
+.login:hover {
+  color: #fff;
+}

@@ -3,53 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Learning</title>
-
-    <style>
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      }
-
-      main {
-        display: grid;
-      }
-
-      .component {
-        overflow: hidden;
-      }
-
-      iframe {
-        display: block;   /* 非常重要，去掉底部神秘空隙 */
-        width: 100%;
-        border: 0;
-      }
-
-    </style>
+    <title>Navbar Component</title>
+    <link rel="stylesheet" href="/04-components/navbar/style.css" />
   </head>
 
   <body>
-    <!--<header>
-      <h1>Frontend Learning</h1>
-      <p style="margin: 8px 0 0; color: #666;">
-        前端组件学习与展示
-      </p>
-    </header>-->
-
-    <main>
-      <!-- Navbar 组件 -->
-      <section class="component">
-        <iframe src="04-components/navbar/" height="120"></iframe>
-      </section>
-
-      <!-- 以后新增组件，照这个结构往下加 -->
-      <!--
-      <section class="component">
-        <h2>Button</h2>
-        <iframe src="04-components/button/" height="200"></iframe>
-      </section>
-      -->
-    </main>
+    <!-- Navbar -->
+     <header>
+      <nav class="navbar" aria-label="Primary navigation"> <!-- 声明：这是导航区域; 给浏览器 / 读屏软件一个“导航入口 -->
+        <div class="nav-left">
+          <a class="logo" href="#">Linear</a>
+          <ul class="menu"> <!-- 声明：下面是一整组导航项; 是一个集合/是一个菜单 -->
+            <li> <!-- 声明：这是其中的一项; 第 1 项/第 2 项/第 N 项 -->
+              <a href="#">Product</a> <!-- 声明：这是一个可跳转的链接; 真正可点击的元素/可获得焦点（Tab） -->
+            </li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Now</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <a class="login" href="#">Log in</a>
+          <a class="signup" href="#">Sign up</a>
+        </div>
+      </nav>
+     </header>
+          
   </body>
 </html>
-
