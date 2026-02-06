@@ -4,13 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Learning</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+
+      main {
+        display: grid;
+      }
+
+      .component {
+        overflow: hidden;
+      }
+
+      iframe {
+        display: block;   /* 非常重要，去掉底部神秘空隙 */
+        width: 100%;
+        border: 0;
+      }
+
+    </style>
   </head>
+
   <body>
-    <h1>Frontend Learning</h1>
-    <ul>
-      <li>
-        <a href="04-components/navbar/">Navbar Component</a>
-      </li>
-    </ul>
+    <!--<header>
+      <h1>Frontend Learning</h1>
+      <p style="margin: 8px 0 0; color: #666;">
+        前端组件学习与展示
+      </p>
+    </header>-->
+
+    <main>
+      <!-- Navbar 组件 -->
+      <section class="component">
+        <iframe src="04-components/navbar/" height="120"></iframe>
+      </section>
+
+      <!-- 以后新增组件，照这个结构往下加 -->
+      <!--
+      <section class="component">
+        <h2>Button</h2>
+        <iframe src="04-components/button/" height="200"></iframe>
+      </section>
+      -->
+    </main>
   </body>
 </html>
+
