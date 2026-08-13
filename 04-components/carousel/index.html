@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="carousel-page">
+      <section class="carousel" aria-label="风景图片轮播图">
+        <div class="carousel-window">
+          <div class="carousel-track">
+            <div class="slide">
+              <img src="images/coast.png" alt="阳光下的海岸与帆船" />
+            </div>
+            <div class="slide">
+              <img src="images/mountains.png" alt="绿色山谷与远处群山" />
+            </div>
+            <div class="slide">
+              <img src="images/desert.png" alt="夕阳下的沙漠与岩石拱门" />
+            </div>
+          </div>
+
+          <button class="carousel-button previous" type="button" aria-label="上一张图片">
+            &#10094;
+          </button>
+          <button class="carousel-button next" type="button" aria-label="下一张图片">
+            &#10095;
+          </button>
+        </div>
+
+        <div class="carousel-dots" aria-label="选择轮播图片">
+          <button class="dot active" type="button" aria-label="显示第 1 张图片"></button>
+          <button class="dot" type="button" aria-label="显示第 2 张图片"></button>
+          <button class="dot" type="button" aria-label="显示第 3 张图片"></button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

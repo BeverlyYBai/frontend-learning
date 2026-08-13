@@ -1,71 +1,218 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Learning</title>
-
-    <style>
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      }
-
-      main {
-        display: grid;
-      }
-
-      .component {
-        overflow: hidden;
-      }
-
-      iframe {
-        display: block;   /* 非常重要，去掉底部神秘空隙 */
-        width: 100%;
-        border: 0;
-      }
-
-      @media (max-width: 700px) {
-        iframe {
-          height: 170px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        iframe {
-          height: 220px;
-        }
-      }
-
-    </style>
+    <meta
+      name="description"
+      content="Roamly creates thoughtful journeys for curious travelers."
+    />
+    <title>Roamly — Find your next horizon</title>
+    <link rel="stylesheet" href="landing.css" />
   </head>
 
   <body>
-    <!--<header>
-      <h1>Frontend Learning</h1>
-      <p style="margin: 8px 0 0; color: #666;">
-        前端组件学习与展示
-      </p>
-    </header>-->
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Roamly home">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>Roamly</span>
+        </a>
 
-    <main>
-      <!-- Navbar 组件 -->
-      <section class="component">
-        <iframe
-          src="04-components/navbar/"
-          title="Navbar 导航栏组件预览"
-          height="120"
-        ></iframe>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <div class="site-menu" id="site-menu">
+          <a href="#destinations">Destinations</a>
+          <a href="#why-roamly">Why Roamly</a>
+          <a href="#stories">Stories</a>
+          <a href="components.html">Components</a>
+          <a class="button button-small" href="#plan">Plan a trip</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Featured destinations">
+        <div class="hero-track">
+          <article class="hero-slide">
+            <img src="04-components/carousel/images/coast.png" alt="Sunlit coast and sailboat" />
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+              <p class="eyebrow">The Mediterranean edit</p>
+              <h1>Find your next horizon.</h1>
+              <p>
+                Thoughtful escapes, beautiful stays, and local stories—curated for
+                travelers who want more than a checklist.
+              </p>
+              <div class="hero-actions">
+                <a class="button" href="#destinations">Explore journeys</a>
+                <a class="text-link" href="#why-roamly">How it works <span>→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <img src="04-components/carousel/images/mountains.png" alt="Green alpine valley" />
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+              <p class="eyebrow">Slow down in the Alps</p>
+              <h2>Take the path less hurried.</h2>
+              <p>Wake to mountain air, follow quiet trails, and leave room for wonder.</p>
+              <div class="hero-actions">
+                <a class="button" href="#destinations">Discover the highlands</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="hero-slide">
+            <img src="04-components/carousel/images/desert.png" alt="Desert arch at sunset" />
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+              <p class="eyebrow">Desert afterglow</p>
+              <h2>Go where the light leads.</h2>
+              <p>Immersive landscapes, starlit camps, and days shaped by the sun.</p>
+              <div class="hero-actions">
+                <a class="button" href="#destinations">Chase the sunset</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <button class="hero-control hero-previous" type="button" aria-label="Previous destination">‹</button>
+        <button class="hero-control hero-next" type="button" aria-label="Next destination">›</button>
+
+        <div class="hero-dots" aria-label="Choose a destination">
+          <button class="hero-dot active" type="button" aria-label="Show destination 1"></button>
+          <button class="hero-dot" type="button" aria-label="Show destination 2"></button>
+          <button class="hero-dot" type="button" aria-label="Show destination 3"></button>
+        </div>
       </section>
 
-      <!-- 以后新增组件，照这个结构往下加 -->
-      <!--
-      <section class="component">
-        <h2>Button</h2>
-        <iframe src="04-components/button/" height="200"></iframe>
+      <section class="intro section" id="why-roamly">
+        <div class="container intro-grid">
+          <div>
+            <p class="section-label">Travel, considered</p>
+            <h2>Less planning. More being there.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              We design unhurried trips around the places, people, and moments that
+              make a destination memorable. Every detail is selected with care, so
+              your time away feels effortless and entirely your own.
+            </p>
+            <div class="stats" aria-label="Roamly at a glance">
+              <div><strong>28</strong><span>destinations</span></div>
+              <div><strong>4.9</strong><span>guest rating</span></div>
+              <div><strong>12k+</strong><span>happy travelers</span></div>
+            </div>
+          </div>
+        </div>
       </section>
-      -->
+
+      <section class="destinations section" id="destinations">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Featured escapes</p>
+              <h2>Choose your kind of away.</h2>
+            </div>
+            <a class="text-link dark" href="#stories">View travel stories <span>→</span></a>
+          </div>
+
+          <div class="card-grid">
+            <article class="destination-card">
+              <img src="04-components/carousel/images/coast.png" alt="Mediterranean coastline" />
+              <div class="card-content">
+                <span class="card-tag">Coast</span>
+                <h3>Mediterranean Blue</h3>
+                <p>Seven sunlit days of hidden coves, fresh tables, and slow sailing.</p>
+                <a href="#plan">From $1,850 <span>→</span></a>
+              </div>
+            </article>
+
+            <article class="destination-card">
+              <img src="04-components/carousel/images/mountains.png" alt="Alpine mountain landscape" />
+              <div class="card-content">
+                <span class="card-tag">Highlands</span>
+                <h3>Alpine Stillness</h3>
+                <p>Five restorative days of scenic trails, village inns, and crisp air.</p>
+                <a href="#plan">From $1,420 <span>→</span></a>
+              </div>
+            </article>
+
+            <article class="destination-card">
+              <img src="04-components/carousel/images/desert.png" alt="Desert dunes at sunset" />
+              <div class="card-content">
+                <span class="card-tag">Desert</span>
+                <h3>Golden Horizons</h3>
+                <p>Four cinematic nights beneath wide skies and unforgettable stars.</p>
+                <a href="#plan">From $1,260 <span>→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story section" id="stories">
+        <div class="container story-grid">
+          <div class="story-image">
+            <img src="04-components/carousel/images/mountains.png" alt="Trail through a green mountain valley" />
+          </div>
+          <div class="story-content">
+            <p class="section-label">Made for real travelers</p>
+            <h2>“We came home with stories, not a schedule.”</h2>
+            <p>
+              Roamly found the balance we could never plan ourselves: enough guidance
+              to feel cared for, and enough freedom to make the journey ours.
+            </p>
+            <div class="traveler">
+              <span class="avatar">AM</span>
+              <div><strong>Alex & Morgan</strong><span>Alpine Stillness, June 2026</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta section" id="plan">
+        <div class="container cta-panel">
+          <div>
+            <p class="section-label">Your next chapter</p>
+            <h2>Ready to go somewhere that stays with you?</h2>
+          </div>
+          <a class="button button-light" href="mailto:hello@roamly.example">Start planning</a>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand footer-brand" href="#top"><span class="brand-mark">R</span><span>Roamly</span></a>
+          <p>Small-group journeys for curious people.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#destinations">Destinations</a>
+          <a href="#why-roamly">About</a>
+          <a href="#stories">Stories</a>
+          <a href="components.html">Component lab</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Roamly. A frontend learning project.</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="landing.js"></script>
   </body>
 </html>
-

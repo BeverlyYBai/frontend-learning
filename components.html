@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Learning Components</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      }
+
+      main {
+        display: grid;
+      }
+
+      .component {
+        overflow: hidden;
+      }
+
+      .component-frame {
+        display: block;
+        width: 100%;
+        border: 0;
+      }
+
+      .navbar-frame {
+        height: 120px;
+      }
+
+      .carousel-frame {
+        height: 720px;
+      }
+
+      @media (max-width: 700px) {
+        .navbar-frame {
+          height: 170px;
+        }
+
+        .carousel-frame {
+          height: 500px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar-frame {
+          height: 220px;
+        }
+
+        .carousel-frame {
+          height: 340px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="component">
+        <iframe
+          class="component-frame navbar-frame"
+          src="04-components/navbar/"
+          title="Navbar 导航栏组件预览"
+        ></iframe>
+      </section>
+
+      <section class="component">
+        <iframe
+          class="component-frame carousel-frame"
+          src="04-components/carousel/"
+          title="Carousel 轮播图组件预览"
+        ></iframe>
+      </section>
+
+      <section class="component">
+        <iframe
+          class="component-frame"
+          src="04-components/button/"
+          title="Button 按钮组件预览"
+          height="160"
+        ></iframe>
+      </section>
+    </main>
+  </body>
+</html>
