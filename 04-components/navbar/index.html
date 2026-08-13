@@ -12,11 +12,23 @@
     <header>
       <nav class="navbar" aria-label="主导航">
         <div class="nav-inner">
-          <div class="nav-left">
-            <a class="logo" href="#">
-              <img src="logo02.png" alt="Frontend Learning 首页" />
-            </a>
+          <a class="logo" href="#">
+            <img src="logo02.png" alt="Frontend Learning 首页" />
+          </a>
 
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="打开主导航"
+            aria-expanded="false"
+            aria-controls="nav-content"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+
+          <div class="nav-content" id="nav-content">
             <ul class="menu">
               <li><a class="active" href="#">Product</a></li>
               <li><a href="#">Resources</a></li>
@@ -25,14 +37,16 @@
               <li><a href="#">Now</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
-          </div>
 
-          <div class="nav-right">
-            <a class="login" href="#">Log in</a>
-            <a class="signup" href="#">Sign up</a>
+            <div class="nav-right">
+              <a class="login" href="#">Log in</a>
+              <a class="signup" href="#">Sign up</a>
+            </div>
           </div>
         </div>
       </nav>
     </header>
+
+    <script src="script.js"></script>
   </body>
 </html>
